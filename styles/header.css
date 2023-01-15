@@ -1,0 +1,177 @@
+:root{
+    --green: #8bc63f;
+    --background: rgb(255, 255, 255, 0.5);
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.logo img{
+    border-radius: 50%;
+    border: 2px solid black;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.contact{
+    background-color: lightgrey;
+}
+.contact ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 30px;
+    list-style: none;
+    align-items: center;
+    padding: 12px;
+    margin: 0 4%;
+}
+
+.contact li{
+    color: rgb(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.contact i{
+    color:  var(--green);
+    font-weight: bold;
+}
+
+nav{
+    display: flex;
+    height: 160px;
+    padding: 0 20 0 60px;
+    background: linear-gradient(
+        to bottom, 
+        #e0e0e0 0%,
+        #e0e0e0 50%,
+        transparent 50%,
+        transparent 100%
+    );
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0 40px;
+    width: 100%;
+}
+
+nav li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8em;
+    color: black;
+}
+
+nav li a:hover{
+    color: var(--green);
+    position: relative;
+    top: -3px;
+    padding-bottom: 30px;
+    border-bottom: 3px var(--green) solid;
+}
+
+.logo img:hover{
+    border: 4px var(--green) solid;
+}
+
+.menu-box{
+    flex-grow: 1;
+}
+.menu{
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+.remove{
+    display: none;
+}
+@media screen and (max-width: 1000px){
+    nav ul{
+        font-size: 0.8em;
+    }
+
+}
+@media screen and (max-width: 860px){
+    nav{
+        padding: 10 40px;
+        background: linear-gradient(
+            to bottom, 
+            #e0e0e0 0%,
+            #e0e0e0 100%
+        );
+    }
+
+    .menu{
+        height: 100%;
+        margin-right: 160px;
+
+    }
+
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .contact ul{
+        font-size: 0.9em;
+    }
+
+}
+
+@media screen and (max-width: 660px){
+    header{
+        position: static;
+    }
+
+    nav{
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .logo{
+        height: 100px;
+    }
+    .menu{
+        margin-right: 0px;
+    }
+    .menu-shortcut{
+        display: inline-block;
+    }
+    .visible{
+        display: none;
+    }
+    .contact ul{
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 480px){
+ 
+    .contact ul{
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (max-width: 330px){
+ 
+    .contact ul{
+        font-size: 0.5em;
+        justify-content: center;
+    }
+}
