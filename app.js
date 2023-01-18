@@ -5,11 +5,11 @@ header.innerHTML = `
 <ul class>
   <li>
     <i class="fa-regular fa-envelope"></i>
-    <span> sales@gluetraps.eu </span>
+    <span>sales@gluetraps.eu</span>
   </li>
   <li>
     <i class="fa-solid fa-phone"></i>
-    <span> +48 666 388 413 </span>
+    <span>+48 666 388 413</span>
   </li>
 </ul>
 </div>

@@ -23,6 +23,7 @@ header {
 
 .contact {
   background-color: lightgrey;
+  height: 40px;
 }
 .contact ul {
   display: flex;
@@ -32,13 +33,14 @@ header {
   list-style: none;
   align-items: center;
   padding: 12px;
-  margin: 0 4%;
+  margin: 0 30px;
+  height: 100%;
 }
 
 .contact li {
   color: rgb(0, 0, 0, 0.5);
   font-weight: bold;
-  font-size: 0.8em;
+  font-size: 12px;
 }
 
 .contact i {
@@ -61,7 +63,7 @@ nav {
 
 .nav-links {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   list-style: none;
   width: 100%;
 }
@@ -87,7 +89,7 @@ nav li a:hover {
 }
 
 .menu-box {
-  width: 70%;
+  width: 60%;
   height: 50%;
   display: flex;
   flex-direction: column;
@@ -111,6 +113,10 @@ nav li a:hover {
 }
 
 @media screen and (max-width: 1024px) {
+  .contact li {
+    font-size: 10px;
+  }
+
   nav {
     justify-content: space-between;
   }
@@ -128,12 +134,12 @@ nav li a:hover {
     background-color: #e0e0e0;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
+    justify-content: flex-start;
   }
 
   .nav-links {
     flex-direction: column;
-    justify-content: space-around;
-    height: 100%;
+    height: 50%;
     align-items: center;
   }
 
@@ -161,6 +167,13 @@ nav li a:hover {
 }
 
 @media screen and (max-width: 768px) {
+  .contact ul {
+    justify-content: center;
+  }
+
+  .contact li {
+    font-size: 8px;
+  }
   .logo img {
     height: 70px;
     position: relative;
