@@ -160,6 +160,21 @@ nav li a:hover {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .logo img {
+    height: 70px;
+    position: relative;
+    top: 5px;
+  }
+  .menu-box {
+    width: 50%;
+  }
+
+  .burger {
+    width: 50%;
+  }
+}
+
 .nav-active {
   transform: translateX(0%);
 }
