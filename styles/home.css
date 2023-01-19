@@ -1,81 +1,110 @@
-.nav-home a{
-    color: var(--green);
+.nav-home a {
+  color: var(--green);
 }
 
-.home{
-    position: relative;
-    margin-top: 120px;
+.home {
+  position: relative;
+  margin-top: 120px;
 }
 
-.banner{
-    position: relative;
+.banner {
+  position: relative;
+  display: flex;
 }
 
-.banner img{
-    max-width: 100%;
+.banner img {
+  max-width: 100%;
 }
 
-.motto{
-    position: absolute;
-    bottom: 40%;
-    left: 0;
-    width: 60%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border-left: 10px solid var(--green);
-    margin: 0 30px;
+.motto {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 30px;
+  height: 100%;
 }
 
-.motto-1{
-    padding: 20px;
-    font-size: 1.4em;
-    /* text-shadow: 1px 1px rgb(0, 0, 0, 0.6); */
-}
- .motto-2{
-    position: relative;
-    color: rgb(0, 0, 0, 0.6);
-    padding: 20px;
-    font-style: italic;
- }
-
- .motto-1 h3 span{
-    color: var(--green);
- }
-
-.desc{
-    background-color: var(--background);
-    padding: 40 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-top: 20px var(--green) solid;
+@keyframes slide {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-.desc p span{
-    color: var(--green);
+@keyframes slide2 {
+  from {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
-.desc p{
-    font-weight: bold;
+.motto-border {
+  border-left: 10px solid var(--green);
+  animation: slide 0.5s 0.5s forwards;
+  opacity: 0;
 }
 
-.desc ul{
-    line-height: 3em;
-    list-style: none;
+.motto-1 {
+  color: white;
+  padding: 20px;
+  font-size: 1.4em;
+  transform: translateX(-700px);
+  animation: slide2 1s 1s forwards;
 }
-.desc li{
-    border-bottom-width: 4px;
-    border-bottom-style: solid;
-    border-image: linear-gradient(to right, var(--green), rgb(139, 198, 63, 0)) 4;
+.motto-2 {
+  position: relative;
+  color: rgb(0, 0, 0, 0.6);
+  padding: 20px;
+  font-style: italic;
+  transform: translateX(-700px);
+  animation: slide 1s 2s forwards;
 }
-.desc i{
-    color: var(--green);
-    font-size: 1.3em;
+
+.motto-1 h3 span {
+  color: var(--green);
 }
 
+.desc {
+  background-color: var(--background);
+  padding: 40 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 20px var(--green) solid;
+}
 
+.desc p span {
+  color: var(--green);
+}
 
+.desc p {
+  font-weight: bold;
+}
 
+.desc ul {
+  line-height: 3em;
+  list-style: none;
+}
+.desc li {
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  border-image: linear-gradient(to right, var(--green), rgb(139, 198, 63, 0)) 4;
+}
+.desc i {
+  color: var(--green);
+  font-size: 1.3em;
+}
