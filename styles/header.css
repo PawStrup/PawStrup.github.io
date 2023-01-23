@@ -67,19 +67,6 @@ nav {
   justify-content: space-around;
   list-style: none;
   width: 100%;
-  opacity: 0;
-  animation: nav-slide 1s 0.5s forwards;
-}
-
-@keyframes nav-slide {
-  from {
-    transform: translateY(-10px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-  }
 }
 
 nav li a {
@@ -88,13 +75,13 @@ nav li a {
   font-weight: bold;
   font-size: 12px;
   color: black;
-  transition: border 0.3s, color 0.3s;
+  transition: color 0.3s;
 }
 
 nav li a:hover {
   color: var(--green);
-  padding-bottom: 27px;
-  border-bottom: 3px var(--green) solid;
+  padding-bottom: 29px;
+  border-bottom: 2px var(--green) solid;
 }
 
 .logo img:hover {

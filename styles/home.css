@@ -99,12 +99,23 @@
   line-height: 3em;
   list-style: none;
 }
-.desc li {
-  border-bottom-width: 4px;
-  border-bottom-style: solid;
-  border-image: linear-gradient(to right, var(--green), rgb(139, 198, 63, 0)) 4;
-}
+
 .desc i {
   color: var(--green);
   font-size: 1.3em;
+}
+
+.border {
+  height: 4px;
+  background: linear-gradient(to right, var(--green), rgb(139, 198, 63, 0));
+  width: 0%;
+}
+
+@keyframes border-slide {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
 }
