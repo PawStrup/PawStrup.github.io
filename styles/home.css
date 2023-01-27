@@ -42,12 +42,13 @@
 
 @keyframes slide2 {
   from {
-    transform: translateX(500px);
-    opacity: 0;
+    transform: translateX(300px);
+    width: 0%;
   }
   to {
     transform: translateY(0px);
-    opacity: 1;
+    width: 100%;
+    padding: 20 20px;
   }
 }
 
@@ -59,10 +60,13 @@
 
 .motto-1 {
   color: white;
-  padding: 20px;
+  padding: 20 0px;
   font-size: 1.4em;
-  transform: translateX(-700px);
-  animation: slide2 1s 1s forwards;
+  transform: translateX(300px);
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0%;
+  animation: slide2 2s 1s forwards;
 }
 .motto-2 {
   position: relative;
@@ -107,9 +111,21 @@
 
 .border {
   height: 4px;
-  background: linear-gradient(to right, var(--green), rgb(139, 198, 63, 0));
   width: 0%;
+  background: linear-gradient(to right, var(--green), rgb(139, 198, 63, 0));
 }
+
+/* .desc:hover li:nth-child(1) {
+  background-color: linear-gradient(
+    to right,
+    var(--green),
+    rgb(139, 198, 63, 0)
+  );
+  background-color: crimson;
+  width: 100%;
+  transition: all 2s ease 1s;
+  animation: border-slide 1s ease 0.5s;
+} */
 
 @keyframes border-slide {
   from {

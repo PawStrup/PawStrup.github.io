@@ -38,9 +38,29 @@
   max-width: 100%;
 }
 
-.gb-1 h3,
-h4 {
-  padding: 20px;
+.gb-1 h3 {
+  width: 0%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 20 0px;
+  transform: translateX(200px);
+  animation: slide 2s ease forwards;
+}
+
+@keyframes slide {
+  from {
+    width: 0%;
+    transform: translateX(200px);
+  }
+  to {
+    width: 100%;
+    padding: 20 20px;
+    transform: translateX(0px);
+  }
+}
+
+.gb-1 h4 {
+  padding: 20 0px;
 }
 .gb-1 h3 span {
   color: var(--green);
@@ -49,21 +69,24 @@ h4 {
 .gb-1 h4 a {
   color: var(--green);
   text-decoration: none;
+  display: inline-block;
+  animation: click-slide 1s 4s ease;
 }
 
 .gb-1 h4 {
-  animation: click-slide 2s 1s ease forwards;
-  opacity: 0;
+  animation: slide 2s 2s ease forwards;
+  width: 0%;
+  transform: translateX(200px);
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @keyframes click-slide {
   from {
-    transform: translateY(-50px);
-    opacity: 0;
+    transform: rotate(0deg);
   }
   to {
-    transform: translateY(0px);
-    opacity: 1;
+    transform: rotate(360deg);
   }
 }
 
@@ -99,24 +122,11 @@ h4 {
 .multi-box-2 img {
   width: 100%;
   transform: scale(0.7);
+  transition: all 0.6s ease;
 }
 
-@keyframes scale1 {
-  from {
-    transform: scale(0.7);
-  }
-  to {
-    transform: scale(0.8);
-  }
-}
-
-@keyframes scale2 {
-  from {
-    transform: scale(0.8);
-  }
-  to {
-    transform: scale(0.7);
-  }
+.multi-container:hover img {
+  transform: scale(0.8);
 }
 
 .multi-box-1 h2 span {
@@ -244,25 +254,13 @@ h4 {
 .deal-box-2 img {
   width: 100%;
   transform: scale(0.8);
+  transition: all 0.6s ease;
 }
 
-@keyframes scale3 {
-  from {
-    transform: scale(0.8);
-  }
-  to {
-    transform: scale(0.9);
-  }
+.deal-container:hover img {
+  transform: scale(0.9);
 }
 
-@keyframes scale4 {
-  from {
-    transform: scale(0.9);
-  }
-  to {
-    transform: scale(0.8);
-  }
-}
 .deal-box-1 h2 span {
   color: var(--green);
 }
@@ -378,24 +376,11 @@ h4 {
 .insect-box-2 img {
   width: 100%;
   transform: scale(0.8);
+  transition: all 0.6s ease;
 }
 
-@keyframes scale5 {
-  from {
-    transform: scale(0.8);
-  }
-  to {
-    transform: scale(0.9);
-  }
-}
-
-@keyframes scale6 {
-  from {
-    transform: scale(0.9);
-  }
-  to {
-    transform: scale(0.8);
-  }
+.insect-container:hover img {
+  transform: scale(0.9);
 }
 
 .insect-box-1 h2 span {
