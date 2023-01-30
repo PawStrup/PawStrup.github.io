@@ -21,6 +21,12 @@
   ul {
     line-height: 3em;
   }
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
   i {
     color: var(--green);
     font-weight: bold;

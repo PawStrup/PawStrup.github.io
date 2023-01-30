@@ -76,6 +76,7 @@
   -webkit-animation: slide 0.5s 0.5s forwards;
           animation: slide 0.5s 0.5s forwards;
   opacity: 0;
+  max-width: 100%;
 }
 
 .motto-1 {

@@ -21,6 +21,12 @@
 .contact-us ul {
   line-height: 3em;
 }
+.contact-us li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
 .contact-us i {
   color: var(--green);
   font-weight: bold;

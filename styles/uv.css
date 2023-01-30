@@ -111,6 +111,9 @@
   -o-border-image: linear-gradient(to right, var(--green), rgba(139, 198, 63, 0)) 1;
      border-image: linear-gradient(to right, var(--green), rgba(139, 198, 63, 0)) 1;
 }
+.uva-container:hover img {
+  transform: scale(1.1);
+}
 
 .uva-box-1 {
   width: 40%;
@@ -136,7 +139,7 @@
 }
 .uva-box-2 img {
   height: 100%;
-  transform: scale(1.2);
+  transition: all 0.6s ease;
 }
 
 .uva-content {
@@ -217,6 +220,9 @@
   -o-border-image: linear-gradient(to left, var(--green), rgba(139, 198, 63, 0)) 1;
      border-image: linear-gradient(to left, var(--green), rgba(139, 198, 63, 0)) 1;
 }
+.uvb-container:hover img {
+  transform: scale(1.1);
+}
 
 .uvb-box-1 {
   width: 40%;
@@ -242,7 +248,7 @@
 }
 .uvb-box-2 img {
   height: 100%;
-  transform: scale(1.2);
+  transition: all 0.6s ease;
 }
 
 .uvb-content {
@@ -314,6 +320,9 @@
   -o-border-image: linear-gradient(to right, var(--green), rgba(139, 198, 63, 0)) 1;
      border-image: linear-gradient(to right, var(--green), rgba(139, 198, 63, 0)) 1;
 }
+.uvc-container:hover img {
+  transform: scale(1.1);
+}
 
 .uvc-box-1 {
   width: 40%;
@@ -339,7 +348,7 @@
 }
 .uvc-box-2 img {
   height: 100%;
-  transform: scale(1.2);
+  transition: all 0.6s ease;
 }
 
 .uvc-content {
