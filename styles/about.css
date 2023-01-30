@@ -3,7 +3,6 @@
 }
 
 /* about us */
-
 .about {
   margin-top: 120px;
 }
@@ -13,19 +12,11 @@
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-evenly;
-  background: linear-gradient(
-    to left,
-    rgba(255, 255, 255, 0.8),
-    rgb(255, 255, 255, 0.1)
-  );
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1));
   border-bottom-width: 20px;
   border-bottom-style: solid;
-  border-image: linear-gradient(to left, var(--green), rgb(139, 198, 63, 0.2)) 4;
-}
-
-.about-1 {
-  width: 50%;
-  line-height: 1.5em;
+  -o-border-image: linear-gradient(to left, var(--green), rgba(139, 198, 63, 0.2)) 4;
+     border-image: linear-gradient(to left, var(--green), rgba(139, 198, 63, 0.2)) 4;
 }
 
 .border {
@@ -33,7 +24,19 @@
   margin: 0 20px;
   opacity: 0;
   transform: translateY(-50px);
-  animation: slide 0.5s 0.5s ease forwards;
+  -webkit-animation: slide 0.5s 0.5s ease forwards;
+          animation: slide 0.5s 0.5s ease forwards;
+}
+
+@-webkit-keyframes slide {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 @keyframes slide {
@@ -46,23 +49,41 @@
     transform: translateY(0px);
   }
 }
+.about-1 {
+  width: 50%;
+  line-height: 1.5em;
+}
+.about-1 h3 {
+  width: 0%;
+  overflow: hidden;
+  white-space: nowrap;
+  transform: translateX(200px);
+  -webkit-animation: slide2 1.5s 1s ease forwards;
+          animation: slide2 1.5s 1s ease forwards;
+}
+.about-1 h3 span {
+  color: var(--green);
+}
 
 .about-2 {
   height: 100%;
   width: 50%;
   z-index: -1;
 }
-
 .about-2 img {
   max-width: 100%;
 }
 
-.about-1 h3 {
-  width: 0%;
-  overflow: hidden;
-  white-space: nowrap;
-  transform: translateX(200px);
-  animation: slide2 1.5s 1s ease forwards;
+@-webkit-keyframes slide2 {
+  from {
+    width: 0%;
+    transform: translateX(200px);
+  }
+  to {
+    width: 100%;
+    transform: translateX(0px);
+    padding: 30 20px;
+  }
 }
 
 @keyframes slide2 {
@@ -76,44 +97,25 @@
     padding: 30 20px;
   }
 }
-
-.about-1 h3 span {
-  color: var(--green);
-}
-
 .about-desc {
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.8),
-    rgb(255, 255, 255, 0.1)
-  );
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1));
   border-bottom-width: 20px;
   border-bottom-style: solid;
-  border-image: linear-gradient(to right, var(--green), rgb(139, 198, 63, 0.2))
-    4;
-}
-
-.about-desc-1 {
-  width: 50%;
-  height: 100%;
-}
-.about-desc-2 {
-  width: 50%;
+  -o-border-image: linear-gradient(to right, var(--green), rgba(139, 198, 63, 0.2)) 4;
+     border-image: linear-gradient(to right, var(--green), rgba(139, 198, 63, 0.2)) 4;
 }
 .about-desc img {
   position: relative;
   max-width: 100%;
   z-index: -1;
 }
-
 .about-desc i {
   color: var(--green);
   font-size: 1.3em;
 }
-
 .about-desc ul {
   list-style: none;
   display: flex;
@@ -121,39 +123,56 @@
   font-size: 0.9em;
   padding: 20 40px;
 }
-
 .about-desc li {
   display: flex;
   align-items: baseline;
   gap: 5px;
   border-bottom-width: 4px;
   border-bottom-style: solid;
-  border-image: linear-gradient(to right, var(--green), rgb(139, 198, 63, 0)) 4;
+  -o-border-image: linear-gradient(to right, var(--green), rgba(139, 198, 63, 0)) 4;
+     border-image: linear-gradient(to right, var(--green), rgba(139, 198, 63, 0)) 4;
   padding: 10 0px;
+}
+
+.about-desc-1 {
+  width: 50%;
+  height: 100%;
+}
+
+.about-desc-2 {
+  width: 50%;
+}
+.about-desc-2 li {
+  opacity: 0;
+  transform: translateX(-50px);
 }
 
 .about-contact {
   text-align: center;
   font-size: 1.4em;
   padding: 30px;
-  background-color: rgb(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
-
 .about-contact a {
   font-weight: bold;
   color: var(--green);
   text-decoration: none;
 }
-
 .about-contact span:hover {
   display: inline-block;
   transform: translateY(-4px);
   transition: transform 0.5s ease;
 }
 
-.about-desc-2 li {
-  opacity: 0;
-  transform: translateX(-50px);
+@-webkit-keyframes shuffle {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
 @keyframes shuffle {
@@ -165,4 +184,4 @@
     opacity: 1;
     transform: translateX(0px);
   }
-}
+}/*# sourceMappingURL=about.css.map */

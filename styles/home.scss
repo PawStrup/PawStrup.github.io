@@ -10,9 +10,9 @@
 .banner {
   position: relative;
   display: flex;
-}
-.banner img {
-  max-width: 100%;
+  img {
+    max-width: 100%;
+  }
 }
 
 .motto {
@@ -28,17 +28,6 @@
   height: 100%;
 }
 
-@-webkit-keyframes slide {
-  from {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 @keyframes slide {
   from {
     transform: translateY(-50px);
@@ -49,17 +38,7 @@
     opacity: 1;
   }
 }
-@-webkit-keyframes slide2 {
-  from {
-    transform: translateX(300px);
-    width: 0%;
-  }
-  to {
-    transform: translateY(0px);
-    width: 100%;
-    padding: 20 20px;
-  }
-}
+
 @keyframes slide2 {
   from {
     transform: translateX(300px);
@@ -71,10 +50,10 @@
     padding: 20 20px;
   }
 }
+
 .motto-border {
   border-left: 10px solid var(--green);
-  -webkit-animation: slide 0.5s 0.5s forwards;
-          animation: slide 0.5s 0.5s forwards;
+  animation: slide 0.5s 0.5s forwards;
   opacity: 0;
 }
 
@@ -86,21 +65,18 @@
   white-space: nowrap;
   overflow: hidden;
   width: 0%;
-  -webkit-animation: slide2 2s 1s forwards;
-          animation: slide2 2s 1s forwards;
+  animation: slide2 2s 1s forwards;
+  h3 span {
+    color: var(--green);
+  }
 }
-.motto-1 h3 span {
-  color: var(--green);
-}
-
 .motto-2 {
   position: relative;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgb(0, 0, 0, 0.6);
   padding: 20px;
   font-style: italic;
   transform: translateX(-700px);
-  -webkit-animation: slide 1s 2s forwards;
-          animation: slide 1s 2s forwards;
+  animation: slide 1s 2s forwards;
 }
 
 .desc {
@@ -111,35 +87,26 @@
   align-items: center;
   justify-content: center;
   border-top: 20px var(--green) solid;
-}
-.desc p {
-  font-weight: bold;
-}
-.desc p span {
-  color: var(--green);
-}
-.desc ul {
-  line-height: 3em;
-  list-style: none;
-}
-.desc i {
-  color: var(--green);
-  font-size: 1.3em;
+  p {
+    font-weight: bold;
+  }
+  p span {
+    color: var(--green);
+  }
+  ul {
+    line-height: 3em;
+    list-style: none;
+  }
+  i {
+    color: var(--green);
+    font-size: 1.3em;
+  }
 }
 
 .border {
   height: 4px;
   width: 0%;
-  background: linear-gradient(to right, var(--green), rgba(139, 198, 63, 0));
-}
-
-@-webkit-keyframes border-slide {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
+  background: linear-gradient(to right, var(--green), rgb(139, 198, 63, 0));
 }
 
 @keyframes border-slide {
@@ -149,4 +116,4 @@
   to {
     width: 100%;
   }
-}/*# sourceMappingURL=home.css.map */
+}

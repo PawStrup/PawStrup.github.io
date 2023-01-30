@@ -1,3 +1,5 @@
+$bacgroundColor: #eee;
+
 * {
   margin: 0;
   padding: 0;
@@ -6,10 +8,10 @@
 }
 
 body {
-  background-color: #eee;
+  background-color: $bacgroundColor;
   position: relative;
   min-height: 100vh;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-}/*# sourceMappingURL=body.css.map */
+}
