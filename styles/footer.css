@@ -6,4 +6,10 @@ footer {
   box-sizing: border-box;
   color: rgba(0, 0, 0, 0.5);
   font-size: 0.8em;
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    font-size: 0.6em;
+  }
 }/*# sourceMappingURL=footer.css.map */

@@ -31,4 +31,10 @@
   color: var(--green);
   font-weight: bold;
   font-size: 1.2em;
+}
+
+@media screen and (max-width: 1200px) {
+  .contact-us {
+    background: #eee;
+  }
 }/*# sourceMappingURL=contact-us.css.map */

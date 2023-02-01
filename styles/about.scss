@@ -23,7 +23,7 @@
   border-image: linear-gradient(to left, var(--green), rgb(139, 198, 63, 0.2)) 4;
 }
 
-.border {
+.about-1-border {
   border-left: var(--green) solid 10px;
   margin: 0 20px;
   opacity: 0;
@@ -156,5 +156,49 @@
   to {
     opacity: 1;
     transform: translateX(0px);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .about-desc-1 {
+    width: auto;
+  }
+  .about-desc-2 {
+    width: 80%;
+  }
+  .about-desc {
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-1 {
+    width: 100%;
+    padding: 40 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .about-1-border {
+      animation: none;
+      opacity: 1;
+      transform: translateY(0px);
+      h3 {
+        animation: none;
+        white-space: normal;
+        transform: translateX(0px);
+        width: 100%;
+        padding: 20px;
+      }
+    }
+  }
+
+  .about-2 {
+    width: 100%;
   }
 }
