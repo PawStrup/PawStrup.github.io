@@ -4,7 +4,9 @@
 
 /* about us */
 .about {
-  margin-top: 120px;
+  padding: 120 0px;
+  background-color: var(--background);
+  z-index: 0;
 }
 
 .about-container {
@@ -145,13 +147,13 @@
 .about-desc-2 li {
   opacity: 0;
   transform: translateX(-50px);
+  margin-bottom: 10px;
 }
 
 .about-contact {
   text-align: center;
   font-size: 1.4em;
   padding: 30px;
-  background-color: rgba(255, 255, 255, 0.5);
 }
 .about-contact a {
   font-weight: bold;
@@ -188,11 +190,13 @@
 @media screen and (max-width: 1200px) {
   .about-desc-1 {
     width: auto;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1));
   }
   .about-desc-2 {
     width: 80%;
   }
   .about-desc {
+    background: transparent;
     flex-direction: column;
     justify-content: center;
     border: none;

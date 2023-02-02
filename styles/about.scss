@@ -5,7 +5,9 @@
 /* about us */
 
 .about {
-  margin-top: 120px;
+  padding: 120 0px;
+  background-color: var(--background);
+  z-index: 0;
 }
 
 .about-container {
@@ -128,6 +130,7 @@
   li {
     opacity: 0;
     transform: translateX(-50px);
+    margin-bottom: 10px;
   }
 }
 
@@ -135,7 +138,6 @@
   text-align: center;
   font-size: 1.4em;
   padding: 30px;
-  background-color: rgb(255, 255, 255, 0.5);
   a {
     font-weight: bold;
     color: var(--green);
@@ -162,11 +164,17 @@
 @media screen and (max-width: 1200px) {
   .about-desc-1 {
     width: auto;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.8),
+      rgb(255, 255, 255, 0.1)
+    );
   }
   .about-desc-2 {
     width: 80%;
   }
   .about-desc {
+    background: transparent;
     flex-direction: column;
     justify-content: center;
     border: none;
