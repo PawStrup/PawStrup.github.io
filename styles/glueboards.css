@@ -298,23 +298,6 @@
   justify-content: center;
 }
 
-/* gb-download */
-.gb-download {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 20px;
-}
-.gb-download a {
-  color: var(--green);
-  text-decoration: none;
-}
-.gb-download a:hover {
-  position: relative;
-  top: -3px;
-}
-
 @media screen and (max-width: 1024px) {
   .gb-container {
     flex-direction: column;

@@ -15,6 +15,7 @@ header {
 }
 
 .logo img {
+  width: 160px;
   border-radius: 50%;
   border: 2px solid black;
   box-sizing: border-box;
@@ -116,7 +117,10 @@ nav li a:hover {
 }
 
 @media screen and (max-width: 1024px) {
-  .contact li {
+  .contact ul {
+    justify-content: center;
+  }
+  .contact ul li {
     font-size: 10px;
   }
   nav {
@@ -126,8 +130,12 @@ nav li a:hover {
     padding-bottom: 0px;
     border-bottom: none;
   }
-  .logo {
+  .logo img {
     margin-left: 100px;
+    height: 70px;
+    width: 70px;
+    position: relative;
+    top: 5px;
   }
   .menu-box {
     position: absolute;
@@ -161,14 +169,6 @@ nav li a:hover {
   }
 }
 @media screen and (max-width: 768px) {
-  .contact ul {
-    justify-content: center;
-  }
-  .logo img {
-    height: 70px;
-    position: relative;
-    top: 5px;
-  }
   .menu-box {
     width: 50%;
   }

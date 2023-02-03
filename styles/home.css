@@ -3,8 +3,8 @@
 }
 
 .home {
-  position: relative;
-  margin-top: 120px;
+  padding: 120 0px;
+  background-color: var(--background);
 }
 
 .banner {
@@ -106,7 +106,6 @@
 }
 
 .desc {
-  background-color: var(--background);
   padding: 40 20px;
   display: flex;
   flex-direction: column;
@@ -197,9 +196,20 @@
   }
   .desc {
     font-size: 0.9em;
-    padding: 40px;
   }
-  .desc h4 {
-    text-align: center;
+}
+@media screen and (max-width: 640px) {
+  .desc {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 600px) {
+  .desc {
+    font-size: 0.6em;
+  }
+}
+@media screen and (max-width: 420px) {
+  .desc {
+    font-size: 0.5em;
   }
 }/*# sourceMappingURL=home.css.map */
