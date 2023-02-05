@@ -11,14 +11,21 @@ header {
   width: 100%;
   left: 0;
   top: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 .logo img {
+  width: 160px;
   border-radius: 50%;
   border: 2px solid black;
   box-sizing: border-box;
-  height: 100%;
+  height: 200%;
+  transition: transform 0.3s;
+  z-index: 2;
+}
+.logo img:hover {
+  border: 4px var(--green) solid;
+  transform: scale(1.1);
 }
 
 .contact {
@@ -36,13 +43,11 @@ header {
   margin: 0 30px;
   height: 100%;
 }
-
 .contact li {
-  color: rgb(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
   font-weight: bold;
   font-size: 12px;
 }
-
 .contact i {
   color: var(--green);
   font-weight: bold;
@@ -50,47 +55,47 @@ header {
 
 nav {
   display: flex;
-  height: 160px;
+  height: 80px;
   justify-content: space-around;
-  background: linear-gradient(
-    to bottom,
-    #e0e0e0 0%,
-    #e0e0e0 50%,
-    transparent 50%,
-    transparent 100%
-  );
+  background-color: #e0e0e0;
 }
-
-.nav-links {
+nav li {
+  height: 100%;
   display: flex;
-  justify-content: space-around;
-  list-style: none;
-  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
-
 nav li a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 12px;
   color: black;
+  transition: color 0.3s;
+  border-bottom: 2px transparent solid;
 }
-
 nav li a:hover {
+  box-sizing: border-box;
   color: var(--green);
-  position: relative;
-  top: -3px;
-  padding-bottom: 30px;
-  border-bottom: 3px var(--green) solid;
+  border-bottom: 2px var(--green) solid;
 }
 
-.logo img:hover {
-  border: 4px var(--green) solid;
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  height: 100%;
 }
 
 .menu-box {
   width: 60%;
-  height: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,7 +108,6 @@ nav li a:hover {
 .bar {
   display: none;
 }
-
 .bar div {
   background-color: black;
   width: 25px;
@@ -113,18 +117,26 @@ nav li a:hover {
 }
 
 @media screen and (max-width: 1024px) {
-  .contact li {
+  .contact ul {
+    justify-content: center;
+  }
+  .contact ul li {
     font-size: 10px;
   }
-
   nav {
     justify-content: space-between;
   }
-
-  .logo {
-    margin-left: 100px;
+  nav li a:hover {
+    padding-bottom: 0px;
+    border-bottom: none;
   }
-
+  .logo img {
+    margin-left: 100px;
+    height: 70px;
+    width: 70px;
+    position: relative;
+    top: 5px;
+  }
   .menu-box {
     position: absolute;
     right: 0;
@@ -136,60 +148,47 @@ nav li a:hover {
     transition: transform 0.5s ease-in;
     justify-content: flex-start;
   }
-
   .nav-links {
     flex-direction: column;
     height: 50%;
     align-items: center;
   }
-
   .nav-links li {
     opacity: 0;
   }
-
   .burger {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50%;
+    height: 100%;
     width: 30%;
   }
-
   .bar {
     display: block;
     cursor: pointer;
   }
-
-  nav li a:hover {
-    padding-bottom: 0px;
-    border-bottom: none;
-  }
 }
-
 @media screen and (max-width: 768px) {
-  .contact ul {
-    justify-content: center;
-  }
-
-  .contact li {
-    font-size: 8px;
-  }
-  .logo img {
-    height: 70px;
-    position: relative;
-    top: 5px;
-  }
   .menu-box {
     width: 50%;
   }
-
   .burger {
     width: 50%;
   }
 }
-
 .nav-active {
   transform: translateX(0%);
+}
+
+@-webkit-keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
 @keyframes navLinkFade {
@@ -197,13 +196,11 @@ nav li a:hover {
     opacity: 0;
     transform: translateX(50px);
   }
-
   to {
     opacity: 1;
     transform: translateX(0px);
   }
 }
-
 .cross-out .bar1 {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
@@ -212,4 +209,4 @@ nav li a:hover {
 }
 .cross-out .bar3 {
   transform: rotate(45deg) translate(-5px, -6px);
-}
+}/*# sourceMappingURL=header.css.map */

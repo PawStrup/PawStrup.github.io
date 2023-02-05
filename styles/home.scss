@@ -1,0 +1,188 @@
+.nav-home a {
+  color: var(--green);
+}
+
+.home {
+  padding: 120 0px;
+  background-color: var(--background);
+}
+
+.banner {
+  position: relative;
+  display: flex;
+  img {
+    max-width: 100%;
+  }
+}
+
+.motto {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 30px;
+  height: 100%;
+}
+
+@keyframes slide {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide2 {
+  from {
+    transform: translateX(300px);
+    width: 0%;
+  }
+  to {
+    transform: translateY(0px);
+    width: 100%;
+    padding: 20 20px;
+  }
+}
+
+.motto-border {
+  border-left: 10px solid var(--green);
+  animation: slide 0.5s 0.5s forwards;
+  opacity: 0;
+  max-width: 100%;
+}
+
+.motto-1 {
+  color: white;
+  padding: 20 0px;
+  font-size: 0.8em;
+  transform: translateX(300px);
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0%;
+  animation: slide2 2s 1s forwards;
+  h1 span {
+    color: var(--green);
+  }
+}
+.motto-2 {
+  position: relative;
+  font-size: 0.6em;
+  color: rgb(0, 0, 0, 0.6);
+  padding: 20px;
+  font-style: italic;
+  transform: translateX(-700px);
+  animation: slide 1s 2s forwards;
+}
+
+.desc {
+  padding: 40 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 20px var(--green) solid;
+  h4 {
+    margin-bottom: 20px;
+  }
+  h4 span {
+    color: var(--green);
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  i {
+    color: var(--green);
+    font-size: 1.3em;
+  }
+  li {
+    display: flex;
+    gap: 5px;
+    align-items: flex-start;
+  }
+}
+
+.border {
+  height: 4px;
+  width: 0%;
+  background: linear-gradient(to right, var(--green), rgb(139, 198, 63, 0));
+}
+
+@keyframes border-slide {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .motto-1 {
+    font-size: 0.7em;
+  }
+  .motto-2 {
+    font-size: 0.5em;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .motto-1 {
+    font-size: 0.6em;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .motto-1 {
+    font-size: 0.5em;
+  }
+  .motto-2 {
+    font-size: 0.4em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .motto-1 {
+    width: 100%;
+    transform: translateX(0px);
+    padding: 20px;
+    white-space: normal;
+    animation: none;
+  }
+  .motto-2 {
+    font-size: 0.4em;
+    transform: translateY(0px);
+    animation: none;
+  }
+
+  .desc {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .desc {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .desc {
+    font-size: 0.6em;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .desc {
+    font-size: 0.5em;
+  }
+}

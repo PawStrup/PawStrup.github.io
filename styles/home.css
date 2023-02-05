@@ -1,81 +1,215 @@
-.nav-home a{
-    color: var(--green);
+.nav-home a {
+  color: var(--green);
 }
 
-.home{
-    position: relative;
-    margin-top: 120px;
+.home {
+  padding: 120 0px;
+  background-color: var(--background);
 }
 
-.banner{
-    position: relative;
+.banner {
+  position: relative;
+  display: flex;
+}
+.banner img {
+  max-width: 100%;
 }
 
-.banner img{
-    max-width: 100%;
+.motto {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 30px;
+  height: 100%;
 }
 
-.motto{
-    position: absolute;
-    bottom: 40%;
-    left: 0;
-    width: 60%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border-left: 10px solid var(--green);
-    margin: 0 30px;
+@-webkit-keyframes slide {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-.motto-1{
+@keyframes slide {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slide2 {
+  from {
+    transform: translateX(300px);
+    width: 0%;
+  }
+  to {
+    transform: translateY(0px);
+    width: 100%;
+    padding: 20 20px;
+  }
+}
+@keyframes slide2 {
+  from {
+    transform: translateX(300px);
+    width: 0%;
+  }
+  to {
+    transform: translateY(0px);
+    width: 100%;
+    padding: 20 20px;
+  }
+}
+.motto-border {
+  border-left: 10px solid var(--green);
+  -webkit-animation: slide 0.5s 0.5s forwards;
+          animation: slide 0.5s 0.5s forwards;
+  opacity: 0;
+  max-width: 100%;
+}
+
+.motto-1 {
+  color: white;
+  padding: 20 0px;
+  font-size: 0.8em;
+  transform: translateX(300px);
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0%;
+  -webkit-animation: slide2 2s 1s forwards;
+          animation: slide2 2s 1s forwards;
+}
+.motto-1 h1 span {
+  color: var(--green);
+}
+
+.motto-2 {
+  position: relative;
+  font-size: 0.6em;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  font-style: italic;
+  transform: translateX(-700px);
+  -webkit-animation: slide 1s 2s forwards;
+          animation: slide 1s 2s forwards;
+}
+
+.desc {
+  padding: 40 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 20px var(--green) solid;
+}
+.desc h4 {
+  margin-bottom: 20px;
+}
+.desc h4 span {
+  color: var(--green);
+}
+.desc ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.desc i {
+  color: var(--green);
+  font-size: 1.3em;
+}
+.desc li {
+  display: flex;
+  gap: 5px;
+  align-items: flex-start;
+}
+
+.border {
+  height: 4px;
+  width: 0%;
+  background: linear-gradient(to right, var(--green), rgba(139, 198, 63, 0));
+}
+
+@-webkit-keyframes border-slide {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes border-slide {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1260px) {
+  .motto-1 {
+    font-size: 0.7em;
+  }
+  .motto-2 {
+    font-size: 0.5em;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .motto-1 {
+    font-size: 0.6em;
+  }
+}
+@media screen and (max-width: 940px) {
+  .motto-1 {
+    font-size: 0.5em;
+  }
+  .motto-2 {
+    font-size: 0.4em;
+  }
+}
+@media screen and (max-width: 800px) {
+  .motto-1 {
+    width: 100%;
+    transform: translateX(0px);
     padding: 20px;
-    font-size: 1.4em;
-    /* text-shadow: 1px 1px rgb(0, 0, 0, 0.6); */
+    white-space: normal;
+    -webkit-animation: none;
+            animation: none;
+  }
+  .motto-2 {
+    font-size: 0.4em;
+    transform: translateY(0px);
+    -webkit-animation: none;
+            animation: none;
+  }
+  .desc {
+    font-size: 0.9em;
+  }
 }
- .motto-2{
-    position: relative;
-    color: rgb(0, 0, 0, 0.6);
-    padding: 20px;
-    font-style: italic;
- }
-
- .motto-1 h3 span{
-    color: var(--green);
- }
-
-.desc{
-    background-color: var(--background);
-    padding: 40 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-top: 20px var(--green) solid;
+@media screen and (max-width: 640px) {
+  .desc {
+    font-size: 0.8em;
+  }
 }
-
-.desc p span{
-    color: var(--green);
+@media screen and (max-width: 600px) {
+  .desc {
+    font-size: 0.6em;
+  }
 }
-
-.desc p{
-    font-weight: bold;
-}
-
-.desc ul{
-    line-height: 3em;
-    list-style: none;
-}
-.desc li{
-    border-bottom-width: 4px;
-    border-bottom-style: solid;
-    border-image: linear-gradient(to right, var(--green), rgb(139, 198, 63, 0)) 4;
-}
-.desc i{
-    color: var(--green);
-    font-size: 1.3em;
-}
-
-
-
-
+@media screen and (max-width: 420px) {
+  .desc {
+    font-size: 0.5em;
+  }
+}/*# sourceMappingURL=home.css.map */
