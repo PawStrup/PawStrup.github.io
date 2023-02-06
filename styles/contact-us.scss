@@ -37,5 +37,10 @@
 @media screen and (max-width: 1200px) {
   .contact-us {
     background: #eee;
+    li {
+      display: grid;
+      grid-auto-flow: column;
+      grid-gap: 10px;
+    }
   }
 }

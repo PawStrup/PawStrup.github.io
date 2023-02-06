@@ -119,6 +119,9 @@ nav li a:hover {
 @media screen and (max-width: 1024px) {
   .contact ul {
     justify-content: center;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 30px;
   }
   .contact ul li {
     font-size: 10px;

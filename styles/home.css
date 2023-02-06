@@ -9,7 +9,6 @@
 
 .banner {
   position: relative;
-  display: flex;
 }
 .banner img {
   max-width: 100%;
@@ -158,28 +157,27 @@
     width: 100%;
   }
 }
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1200px) {
   .motto-1 {
-    font-size: 0.7em;
+    font-size: 0.65em;
   }
   .motto-2 {
     font-size: 0.5em;
   }
 }
-@media screen and (max-width: 1080px) {
-  .motto-1 {
-    font-size: 0.6em;
-  }
-}
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 1024px) {
   .motto-1 {
     font-size: 0.5em;
   }
   .motto-2 {
     font-size: 0.4em;
   }
+  .desc ul {
+    display: grid;
+    grid-gap: 10px;
+  }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   .motto-1 {
     width: 100%;
     transform: translateX(0px);
@@ -195,21 +193,7 @@
             animation: none;
   }
   .desc {
-    font-size: 0.9em;
-  }
-}
-@media screen and (max-width: 640px) {
-  .desc {
     font-size: 0.8em;
-  }
-}
-@media screen and (max-width: 600px) {
-  .desc {
-    font-size: 0.6em;
-  }
-}
-@media screen and (max-width: 420px) {
-  .desc {
-    font-size: 0.5em;
+    padding: 40 30px;
   }
 }/*# sourceMappingURL=home.css.map */

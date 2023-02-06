@@ -37,4 +37,9 @@
   .contact-us {
     background: #eee;
   }
+  .contact-us li {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 10px;
+  }
 }/*# sourceMappingURL=contact-us.css.map */

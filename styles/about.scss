@@ -108,7 +108,7 @@
     flex-direction: column;
     gap: 10px;
     font-size: 0.9em;
-    padding: 20 40px;
+    padding: 40 20px;
   }
 }
 
@@ -166,6 +166,9 @@
   }
   .about-desc-2 {
     width: 80%;
+    ul {
+      padding: 40 30px;
+    }
   }
   .about-desc {
     background: transparent;
@@ -201,6 +204,17 @@
   }
 
   .about-2 {
+    width: 100%;
+  }
+
+  .about-desc-2 ul {
+    display: grid;
+    grid-gap: 10px;
+  }
+}
+
+@media screen and(max-width: 768px) {
+  .about-desc-2 {
     width: 100%;
   }
 }
