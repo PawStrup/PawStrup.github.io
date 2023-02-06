@@ -329,10 +329,14 @@
     flex-direction: column;
     height: auto;
     padding: 20px;
-    gap: 20px;
+  }
+  .multi-container .multi-content {
+    display: grid;
+    grid-gap: 20px;
   }
   .multi-box-1 {
     width: 70%;
+    margin-bottom: 20px;
   }
   .multi-box-1 h2 {
     text-align: center;
@@ -345,10 +349,14 @@
     flex-direction: column;
     height: auto;
     padding: 20px;
-    gap: 20px;
+  }
+  .deal-container .deal-content {
+    display: grid;
+    grid-gap: 20px;
   }
   .deal-box-1 {
     width: 70%;
+    margin-bottom: 20px;
   }
   .deal-box-1 h2 {
     text-align: center;
@@ -361,10 +369,14 @@
     flex-direction: column;
     height: auto;
     padding: 20px;
-    gap: 20px;
+  }
+  .insect-container .insect-content {
+    display: grid;
+    grid-gap: 20px;
   }
   .insect-box-1 {
     width: 70%;
+    margin-bottom: 20px;
   }
   .insect-box-1 h2 {
     text-align: center;

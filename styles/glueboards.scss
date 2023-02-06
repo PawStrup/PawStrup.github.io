@@ -305,11 +305,15 @@
     flex-direction: column;
     height: auto;
     padding: 20px;
-    gap: 20px;
+    .multi-content {
+      display: grid;
+      grid-gap: 20px;
+    }
   }
 
   .multi-box-1 {
     width: 70%;
+    margin-bottom: 20px;
     h2 {
       text-align: center;
       margin-bottom: 20px;
@@ -324,11 +328,15 @@
     flex-direction: column;
     height: auto;
     padding: 20px;
-    gap: 20px;
+    .deal-content {
+      display: grid;
+      grid-gap: 20px;
+    }
   }
 
   .deal-box-1 {
     width: 70%;
+    margin-bottom: 20px;
     h2 {
       text-align: center;
       margin-bottom: 20px;
@@ -343,11 +351,15 @@
     flex-direction: column;
     height: auto;
     padding: 20px;
-    gap: 20px;
+    .insect-content {
+      display: grid;
+      grid-gap: 20px;
+    }
   }
 
   .insect-box-1 {
     width: 70%;
+    margin-bottom: 20px;
     h2 {
       text-align: center;
       margin-bottom: 20px;
