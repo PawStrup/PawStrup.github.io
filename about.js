@@ -1,5 +1,8 @@
-const shuffle = document.querySelectorAll(".about-desc-2 li");
+const about = document.querySelector(".about-desc");
+const border = document.querySelectorAll(".border");
 
-shuffle.forEach((li, index) => {
-  li.style.animation = `shuffle 1s ${index / 2 + 1.5}s forwards`;
+about.addEventListener("mouseover", () => {
+  border.forEach((li, index) => {
+    li.style.animation = `border-slide 1s ease forwards ${index / 3 + 0.2}s`;
+  });
 });

@@ -106,18 +106,9 @@
     list-style: none;
     display: flex;
     flex-direction: column;
+    gap: 10px;
     font-size: 0.9em;
     padding: 20 40px;
-  }
-  li {
-    display: flex;
-    align-items: baseline;
-    gap: 5px;
-    border-bottom-width: 4px;
-    border-bottom-style: solid;
-    border-image: linear-gradient(to right, var(--green), rgb(139, 198, 63, 0))
-      4;
-    padding: 10 0px;
   }
 }
 
@@ -128,9 +119,23 @@
 .about-desc-2 {
   width: 50%;
   li {
-    opacity: 0;
-    transform: translateX(-50px);
-    margin-bottom: 10px;
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+  }
+  .border {
+    height: 4px;
+    background: linear-gradient(to right, var(--green), rgb(139, 198, 63, 0));
+    width: 0%;
+  }
+}
+
+@keyframes border-slide {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
   }
 }
 
@@ -147,17 +152,6 @@
     display: inline-block;
     transform: translateY(-4px);
     transition: transform 0.5s ease;
-  }
-}
-
-@keyframes shuffle {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
   }
 }
 
