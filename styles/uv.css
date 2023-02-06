@@ -317,6 +317,12 @@
     display: grid;
     grid-gap: 10px;
   }
+  .uva-box-1 li {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 5px;
+    justify-content: start;
+  }
   .uva-box-2 {
     width: 70%;
   }
@@ -338,6 +344,12 @@
     display: grid;
     grid-gap: 10px;
   }
+  .uvb-box-1 li {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 5px;
+    justify-content: start;
+  }
   .uvb-box-2 {
     width: 70%;
   }
@@ -358,6 +370,12 @@
   .uvc-box-1 ul {
     display: grid;
     grid-gap: 10px;
+  }
+  .uvc-box-1 li {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 5px;
+    justify-content: start;
   }
   .uvc-box-2 {
     width: 70%;

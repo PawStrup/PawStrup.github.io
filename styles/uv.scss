@@ -295,6 +295,12 @@
       display: grid;
       grid-gap: 10px;
     }
+    li {
+      display: grid;
+      grid-auto-flow: column;
+      grid-gap: 5px;
+      justify-content: start;
+    }
   }
 
   .uva-box-2 {
@@ -319,6 +325,12 @@
       display: grid;
       grid-gap: 10px;
     }
+    li {
+      display: grid;
+      grid-auto-flow: column;
+      grid-gap: 5px;
+      justify-content: start;
+    }
   }
 
   .uvb-box-2 {
@@ -342,6 +354,12 @@
     ul {
       display: grid;
       grid-gap: 10px;
+    }
+    li {
+      display: grid;
+      grid-auto-flow: column;
+      grid-gap: 5px;
+      justify-content: start;
     }
   }
 
