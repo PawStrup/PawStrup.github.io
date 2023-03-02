@@ -14,40 +14,41 @@ const NumberOFChunkElements = [];
 const chunks = [];
 
 const aggregateIntoChunks = (array) => {
-  let SumOfChunkElements = 0;
+  let arrayLength = array.length;
 
   for (i = 0; ; i++) {
     const randomNumber = getRandomNumber();
     NumberOFChunkElements.push(randomNumber);
-    SumOfChunkElements += randomNumber;
-    if (SumOfChunkElements === array.length) {
-      break;
-    } else if (SumOfChunkElements > array.length) {
-      NumberOFChunkElements.splice(0);
-      SumOfChunkElements = 0;
+    arrayLength -= randomNumber;
+    if (arrayLength <= MAX_CHUNK_LENGTH) {
+      if (arrayLength >= MIN_CHUNK_LENGTH) {
+        NumberOFChunkElements.push(arrayLength);
+        break;
+      } else {
+        arrayLength += randomNumber;
+        NumberOFChunkElements.pop();
+      }
     }
   }
 
   let sliceBorder = 0;
 
-  for (i = 0; i < NumberOFChunkElements.length; i++) {
-    chunks.push(
-      array.slice(sliceBorder, NumberOFChunkElements[i] + sliceBorder)
-    );
-    sliceBorder += NumberOFChunkElements[i];
-  }
+  NumberOFChunkElements.forEach((element) => {
+    chunks.push(array.slice(sliceBorder, element + sliceBorder));
+    sliceBorder += element;
+  });
 
   return chunks;
 };
 
-aggregateIntoChunks(alphabet);
+console.log(aggregateIntoChunks(alphabet));
 
 // const getRandomNumber = () => Math.round(Math.random() * (MAX_CHUNK_LENGTH - MIN_CHUNK_LENGTH) + MIN_CHUNK_LENGTH);
 
 // 4 <= chunk >= 7
 // every chunk = 4,5,6,7
-// alphabetSum = alphabet.length = 24
-// first step - find array of chunks, which sum will equal to 24 [4, 5, 5, 6, 4] or [7, 4, 7, 6]
+// alphabetarrayLength = alphabet.length = 24
+// first step - find array of chunks, which arrayLength will equal to 24 [4, 5, 5, 6, 4] or [7, 4, 7, 6]
 // alphabet
 
 // tworzysz pusta tablice mozliwych dlugosci
